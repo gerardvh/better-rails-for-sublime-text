@@ -44,6 +44,17 @@ By the way, there is a [Better Ruby](https://github.com/fnando/better-ruby-for-s
     },
 
     {
+      // This is an example of using a custom function to decide whether or
+      // not to apply this syntax. The source file should be in a plugin folder.
+      // "name" is the function name and "source" is the file in which the
+      // function is contained. The rule should be specified as such.
+      "syntax": "Better Rails/Ruby on Rails",
+      "rules": [
+          {"function": {"source": "ApplySyntax.as_plugins.is_rails_file"}}
+      ]
+    },
+
+    {
       "syntax": "Better Ruby/Ruby",
       "extensions": ["thor", "rake", "simplecov", "jbuilder", "rb", "podspec", "rabl"],
       "rules": [
